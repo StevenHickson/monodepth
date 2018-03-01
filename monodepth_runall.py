@@ -95,8 +95,8 @@ def test_simple(params):
             output_name = os.path.splitext(os.path.basename(line))[0]
             print('dir: ' + output_directory)
             print('name: ' + output_name)
-            disp_to_img = scipy.misc.imresize(disp_pp.squeeze(), [args.input_height, args.input_width])
-            write_flt(output_directory + '/' + output_name + '.flt', disp_to_img)
+            #disp_to_img = scipy.misc.imresize(disp_pp.squeeze(), [args.input_height, args.input_width])
+            write_flt(output_directory + '/' + output_name + '.flt', disp_pp.squeeze())
             
             #np.save(os.path.join(output_directory, "{}_disp.npy".format(output_name)), disp_pp)
             #plt.imsave(os.path.join(output_directory, "{}_disp.png".format(output_name)), disp_to_img, cmap='plasma')
